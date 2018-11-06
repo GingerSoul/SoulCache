@@ -1,0 +1,16 @@
+{
+    "name": "gingersoul/soul-precache",
+    "description": "A WP plugin for pre-caching assets in the browser.",
+    "license": "GPLv3",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Anton Ukhanev",
+            "email": "xedin.unknown@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^5.4 | ^7.0"
+    }
+}
