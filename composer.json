@@ -14,10 +14,18 @@
     "require": {
         "php": "^5.4 | ^7.0"
     },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^1.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
+    },
     "repositories":[
         {
             "type":"composer",
             "url":"https://wpackagist.org"
         }
-    ]
+    ],
+    "scripts": {
+        "cscheck": "phpcs -s -n",
+        "csfix": "phpcbf --standard=phpcs.xml"
+    }
 }
