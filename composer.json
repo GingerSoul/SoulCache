@@ -3,6 +3,7 @@
     "description": "A WP plugin for pre-caching assets in the browser.",
     "license": "GPLv3",
     "prefer-stable": true,
+    "type": "wordpress-plugin",
     "authors": [
         {
             "name": "Anton Ukhanev",
@@ -12,5 +13,11 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^5.4 | ^7.0"
-    }
+    },
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ]
 }
