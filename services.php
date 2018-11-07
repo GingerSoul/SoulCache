@@ -1,5 +1,7 @@
 <?php
 
+use GingerSoul\SoulPrecache\Asset_Links_Handler;
+use GingerSoul\SoulPrecache\Fields_Types_Handler;
 use Psr\Container\ContainerInterface;
 use GingerSoul\SoulPrecache\Plugin;
 use GingerSoul\SoulPrecache\PHP_Template;
@@ -72,7 +74,36 @@ return function ( $base_path, $base_url ) {
          */
         'handlers'                               => function ( ContainerInterface $c ) {
             return [
+                $c->get( 'handler_fields_types' ),
             ];
+        },
+
+        'metaboxes'                              => function ( ContainerInterface $c ) {
+            return [
+                [
+                    'title'      => __( 'Pre-Cache Assets' ),
+                    'post_types' => $c->get( 'precache_images_post_types' ),
+                    'fields'     => [
+                        [
+                            'name'              => __( 'Images' ),
+                            'id'                => 'precache_post_images',
+                            'label_description' => __( 'Images that should be pre-cached when viewing this post' ),
+                            'std'               => '',
+                            'type'              => 'image_advanced',
+                        ],
+                    ],
+                ],
+            ];
+        },
+
+        'precache_images_post_types'              => function ( ContainerInterface $c ) {
+            return [
+                'page',
+            ];
+        },
+
+        'handler_fields_types'                    => function ( ContainerInterface $c ) {
+            return new Fields_Types_Handler( $c );
         },
     ];
 };
