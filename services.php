@@ -75,6 +75,7 @@ return function ( $base_path, $base_url ) {
         'handlers'                               => function ( ContainerInterface $c ) {
             return [
                 $c->get( 'handler_fields_types' ),
+                $c->get( 'handler_asset_links' ),
             ];
         },
 
@@ -102,8 +103,28 @@ return function ( $base_path, $base_url ) {
             ];
         },
 
+        'precache_for_post_types'                => function ( ContainerInterface $c ) {
+            $types = [];
+
+            foreach (['precache_images_post_types'] as $service_id) {
+                $list = $c->get( $service_id );
+                $types = array_flip(
+                    array_merge(
+                        array_flip($types),
+                        array_flip( $list )
+                    )
+                );
+            }
+
+            return $types;
+        },
+
         'handler_fields_types'                    => function ( ContainerInterface $c ) {
             return new Fields_Types_Handler( $c );
+        },
+
+        'handler_asset_links'                     => function ( ContainerInterface $c ) {
+            return new Asset_Links_Handler( $c);
         },
     ];
 };
