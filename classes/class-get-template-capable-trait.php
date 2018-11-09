@@ -2,12 +2,15 @@
 /**
  * Get_Template_Capable_Trait trait.
  *
- * @package SQuiz
+ * @package SoulPrecache
  */
 
 namespace GingerSoul\SoulPrecache;
 
 use Exception;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
+use RuntimeException;
 
 /**
  * Functionality for retrieving templates
@@ -24,16 +27,20 @@ trait Get_Template_Capable_Trait {
 	 *
 	 * @param string $template The template key.
 	 *
-	 * @throws Exception If template could not be retrieved.
+	 * @throws RuntimeException If template could not be retrieved.
 	 *
 	 * @return PHP_Template The template for the key.
 	 */
 	protected function get_template( $template ) {
-		$pathFactory = $this->get_config( 'template_path_factory' );
-		$path = $pathFactory( "$template.php" );
-		$templateFactory = $this->get_config( 'template_factory' );
+		try {
+			$path_factory     = $this->get_config( 'template_path_factory' );
+			$path             = $path_factory( "$template.php" );
+			$template_factory = $this->get_config( 'template_factory' );
+		} catch ( Exception $e ) {
+			throw new RuntimeException( vsprintf( 'Could not retrieve template "%1$s"', [ $template ] ), 0, $e );
+		}
 
-		return $templateFactory( $path );
+		return $template_factory( $path );
 	}
 
 	/**
@@ -43,7 +50,8 @@ trait Get_Template_Capable_Trait {
 	 *
 	 * @param string $key The key of the config value to retrieve.
 	 *
-	 * @throws Exception If problem retrieving.
+	 * @throws NotFoundExceptionInterface If config for the specified key is not found.
+	 * @throws ContainerExceptionInterface If problem retrieving config.
 	 *
 	 * @return mixed The config value.
 	 */

@@ -7,10 +7,13 @@
 
 namespace GingerSoul\SoulPrecache;
 
-use Exception;
 use Psr\Container\ContainerInterface;
+use Psr\Container\NotFoundExceptionInterface;
+use Psr\Container\ContainerExceptionInterface;
 
 /**
+ * Functionality for awareness of configuration via a container.
+ *
  * @since [*next-version*]
  *
  * @package SoulPrecache
@@ -33,7 +36,8 @@ trait Config_Aware_Trait {
 	 *
 	 * @param string $key The key of the config value to retrieve.
 	 *
-	 * @throws Exception If problem retrieving.
+	 * @throws NotFoundExceptionInterface If config for the specified key is not found.
+	 * @throws ContainerExceptionInterface If problem retrieving config.
 	 *
 	 * @return mixed The config value.
 	 */
@@ -42,11 +46,13 @@ trait Config_Aware_Trait {
 	}
 
 	/**
-	 * @param $key
+	 * Checks whether configuration for the specified key exists.
 	 *
-	 * @throws Exception If problem checking.
+	 * @param string $key The key to check the configuration for.
 	 *
-	 * @return bool
+	 * @throws ContainerExceptionInterface If problem checking.
+	 *
+	 * @return bool True if config for the specified key exists; false otherwise.
 	 */
 	public function has_config( $key ) {
 		return $this->_get_config_container()->has( $key );

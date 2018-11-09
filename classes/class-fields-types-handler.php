@@ -20,17 +20,6 @@ use Psr\Container\ContainerInterface;
 class Fields_Types_Handler extends Handler {
 
 	/**
-	 * Qanda_Fields_Types_Handler constructor.
-	 *
-	 * @since [*next-version*]
-	 *
-	 * @param ContainerInterface $config
-	 */
-	public function __construct( ContainerInterface $config ) {
-		parent::__construct( $config );
-	}
-
-	/**
 	 * {@inheritdoc}
 	 *
 	 * @since [*next-version*]

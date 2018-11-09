@@ -9,7 +9,6 @@ namespace GingerSoul\SoulPrecache;
 
 use Exception;
 use Psr\Container\ContainerInterface;
-use Throwable;
 
 /**
  * A base class for all handlers.
@@ -31,7 +30,7 @@ abstract class Handler {
 	 *
 	 * @since [*next-version*]
 	 *
-	 * @param ContainerInterface $config The configuration of this plugin.
+	 * @param ContainerInterface $config The configuration of this handler.
 	 */
 	public function __construct( ContainerInterface $config ) {
 		$this->_set_config_container( $config );
@@ -42,7 +41,9 @@ abstract class Handler {
 	 *
 	 * @since [*next-version*]
 	 *
-	 * @return mixed
+	 * @throws Exception If problem running.
+	 *
+	 * @return mixed The result of running the handler.
 	 */
 	public function run() {
 		$this->hook();
@@ -54,6 +55,8 @@ abstract class Handler {
 	 * Procedural way to run the handler.
 	 *
 	 * @since [*next-version*]
+	 *
+	 * @throws Exception If problem during invoking.
 	 *
 	 * @return mixed The result of handling.
 	 */
