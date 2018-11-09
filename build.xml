@@ -106,6 +106,7 @@
         <exclude name="**/.phan/**"/>
         <exclude name="**/build_log/**"/>
         <exclude name="**/.php_cs"/>
+        <exclude name="**/phpcs.xml"/>
         <exclude name="**/.codeclimate.yml"/>
         <exclude name="**/.travis.yml"/>
         <exclude name="**/build.xml"/>
