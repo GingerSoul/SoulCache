@@ -59,7 +59,7 @@ class Asset_Links_Handler extends Handler {
 		}
 
 		$images = $this->get_precache_images( $post );
-		$pages = $this->get_precache_post_urls( $post );
+		$pages  = $this->get_precache_post_urls( $post );
 
 		return $this->get_template( 'asset-links' )->render(
 			[
@@ -79,9 +79,13 @@ class Asset_Links_Handler extends Handler {
 	 * @return array[] See {@link https://docs.metabox.io/fields/image-advanced/#template-usage}.
 	 */
 	protected function get_precache_images( WP_Post $post ) {
-		return rwmb_meta( 'precache_post_images', [
-			'size' => 'thumbnail',
-		], $post->ID );
+		return rwmb_meta(
+			'precache_post_images',
+			[
+				'size' => 'thumbnail',
+			],
+			$post->ID
+		);
 	}
 
 	/**
@@ -94,7 +98,7 @@ class Asset_Links_Handler extends Handler {
 	 * @return string[] List of post URLs to pre-fetch.
 	 */
 	protected function get_precache_post_urls( WP_Post $post ) {
-		$post_ids = $this->get_precache_post_ids( $post );
+		$post_ids  = $this->get_precache_post_ids( $post );
 		$post_urls = $this->index_list(
 			$post_ids,
 			function ( $value ) {

@@ -24,12 +24,12 @@ $images = $c( 'images' );
  *
  * @var string[]
  */
-$pages = $c( 'pages' );
+$page_urls = $c( 'pages' );
 ?>
 <?php foreach ( $images as $attachment_id => $image_data ) : ?>
 	<link rel="prefetch" href="<?php echo esc_attr( $image_data['full_url'] ); ?>" />
 <?php endforeach; ?>
 
-<?php foreach ( $pages as $page_url ) : ?>
+<?php foreach ($page_urls as $page_url ) : ?>
 	<link rel="prefetch" href="<?php echo esc_attr( $page_url ); ?>" />
 <?php endforeach; ?>
