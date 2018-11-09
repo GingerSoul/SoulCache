@@ -40,13 +40,13 @@ return function ( $base_path, $base_url ) {
 		},
 
 		'template_path_factory'      => function ( ContainerInterface $c ) {
-			$baseDir      = rtrim( $c->get( 'base_dir' ), '\\/' );
-			$templatesDir = trim( $c->get( 'templates_dir' ), '\\/' );
+			$base_dir      = rtrim( $c->get( 'base_dir' ), '\\/' );
+			$templates_dir = trim( $c->get( 'templates_dir' ), '\\/' );
 
-			return function ( $name ) use ( $baseDir, $templatesDir ) {
+			return function ( $name ) use ( $base_dir, $templates_dir ) {
 				$name = trim( $name, '\\/' );
 
-				return "$baseDir/$templatesDir/$name";
+				return "$base_dir/$templates_dir/$name";
 			};
 		},
 
