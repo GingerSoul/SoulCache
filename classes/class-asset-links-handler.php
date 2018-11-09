@@ -28,7 +28,7 @@ class Asset_Links_Handler extends Handler {
 		add_action(
 			'wp_head',
 			function () {
-				echo $this->get_head_htmL(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo $this->get_head_htmL(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped WordPress.XSS.EscapeOutput.OutputNotEscaped .
 			}
 		);
 	}
