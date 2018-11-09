@@ -19,6 +19,9 @@ use WP_Post;
  */
 class Asset_Links_Handler extends Handler {
 
+	/* @since [*next-version*] */
+	use Index_List_Capable_Trait;
+
 	/**
 	 * {@inheritdoc}
 	 *
@@ -56,9 +59,12 @@ class Asset_Links_Handler extends Handler {
 		}
 
 		$images = $this->get_precache_images( $post );
+		$pages = $this->get_precache_post_urls( $post );
+
 		return $this->get_template( 'asset-links' )->render(
 			[
 				'images' => $images,
+				'pages'  => $pages,
 			]
 		);
 	}
@@ -73,7 +79,46 @@ class Asset_Links_Handler extends Handler {
 	 * @return array[] See {@link https://docs.metabox.io/fields/image-advanced/#template-usage}.
 	 */
 	protected function get_precache_images( WP_Post $post ) {
-		return rwmb_meta( 'precache_post_images', [ 'size' => 'thumbnail' ], $post->ID );
+		return rwmb_meta( 'precache_post_images', [
+			'size' => 'thumbnail',
+		], $post->ID );
+	}
+
+	/**
+	 * Retrieves URLs to pre-fetch for the given post.
+	 *
+	 * @since [*next-version*]
+	 *
+	 * @param WP_Post $post The post to get the pre-fetch URLs for.
+	 *
+	 * @return string[] List of post URLs to pre-fetch.
+	 */
+	protected function get_precache_post_urls( WP_Post $post ) {
+		$post_ids = $this->get_precache_post_ids( $post );
+		$post_urls = $this->index_list(
+			$post_ids,
+			function ( $value ) {
+				return get_permalink( $value );
+			},
+			function ( $value ) {
+				return $value;
+			}
+		);
+
+		return $post_urls;
+	}
+
+	/**
+	 * Retrieves IDs of posts to pre-fetch.
+	 *
+	 * @since [*next-version*]
+	 *
+	 * @param WP_Post $post The post to pre-fetch the pages for.
+	 *
+	 * @return int[] The list of IDs of posts to pre-fetch the URLs for.
+	 */
+	protected function get_precache_post_ids( WP_Post $post ) {
+		return rwmb_meta( 'precache_posts_page', [], $post->ID );
 	}
 
 	/**
