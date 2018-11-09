@@ -27,7 +27,6 @@ $images = $c( 'images' );
 $pages = $c( 'pages' );
 ?>
 <?php foreach ( $images as $attachment_id => $image_data ) : ?>
-	<link rel="prefetch" href="<?php echo esc_attr( $image_data['url'] ); ?>" />
 	<link rel="prefetch" href="<?php echo esc_attr( $image_data['full_url'] ); ?>" />
 <?php endforeach; ?>
 
