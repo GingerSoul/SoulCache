@@ -18,8 +18,8 @@
 
 namespace GingerSoul\SoulPrecache;
 
-define ( 'SOULPRECACHE_BASE_PATH', __FILE__ );
-define ( 'SOULPRECACHE_BASE_DIR', dirname( SOULPRECACHE_BASE_PATH ) );
+define( 'SOULPRECACHE_BASE_PATH', __FILE__ );
+define( 'SOULPRECACHE_BASE_DIR', dirname( SOULPRECACHE_BASE_PATH ) );
 
 
 /**
@@ -30,15 +30,15 @@ define ( 'SOULPRECACHE_BASE_DIR', dirname( SOULPRECACHE_BASE_PATH ) );
  * @return null|Plugin
  */
 function plugin() {
-    static $instance = null;
+	static $instance = null;
 
-    if ( is_null( $instance ) ) {
-        $bootstrap = require ( SOULPRECACHE_BASE_DIR . '/bootstrap.php' );
+	if ( is_null( $instance ) ) {
+		$bootstrap = require SOULPRECACHE_BASE_DIR . '/bootstrap.php';
 
-        $instance = $bootstrap( SOULPRECACHE_BASE_PATH, plugins_url( '', SOULPRECACHE_BASE_PATH ) );
-    }
+		$instance = $bootstrap( SOULPRECACHE_BASE_PATH, plugins_url( '', SOULPRECACHE_BASE_PATH ) );
+	}
 
-    return $instance;
+	return $instance;
 }
 
 plugin()->run();

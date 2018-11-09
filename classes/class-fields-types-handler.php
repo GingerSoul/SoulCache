@@ -17,7 +17,7 @@ use Psr\Container\ContainerInterface;
  *
  * @package SoulPrecache
  */
-class Fields_Types_Handler extends Handler  {
+class Fields_Types_Handler extends Handler {
 
 	/**
 	 * Qanda_Fields_Types_Handler constructor.
@@ -44,36 +44,36 @@ class Fields_Types_Handler extends Handler  {
 		);
 	}
 
-    /**
-     * Adds metabox entries to current list.
-     *
-     * Mostly intended to handle the `rwmb_meta_boxes` filter.
-     *
-     * @since [*next-version*]
-     * @see https://docs.metabox.io/extensions/mb-term-meta/#example
-     *
-     * @param int[] $metaboxes The current list of metabox entries.
-     *
-     * @throws Exception If problem retrieving.
-     *
-     * @return int[] The new list of metabox entries.
-     */
-    protected function add_metaboxes( $metaboxes ) {
-        return array_merge( $metaboxes, $this->get_metaboxes() );
-    }
+	/**
+	 * Adds metabox entries to current list.
+	 *
+	 * Mostly intended to handle the `rwmb_meta_boxes` filter.
+	 *
+	 * @since [*next-version*]
+	 * @see https://docs.metabox.io/extensions/mb-term-meta/#example
+	 *
+	 * @param int[] $metaboxes The current list of metabox entries.
+	 *
+	 * @throws Exception If problem retrieving.
+	 *
+	 * @return int[] The new list of metabox entries.
+	 */
+	protected function add_metaboxes( $metaboxes ) {
+		return array_merge( $metaboxes, $this->get_metaboxes() );
+	}
 
-    /**
-     * Retrieves the metaboxes to create.
-     *
-     * @since [*next-version*]
-     *
-     * @see https://docs.metabox.io/extensions/mb-term-meta/
-     *
-     * @throws Exception If problem retrieving.
-     *
-     * @return array[] An array of MetaBox entries, each describing a metabox.
-     */
-    protected function get_metaboxes() {
-        return (array) $this->get_config( 'metaboxes' );
+	/**
+	 * Retrieves the metaboxes to create.
+	 *
+	 * @since [*next-version*]
+	 *
+	 * @see https://docs.metabox.io/extensions/mb-term-meta/
+	 *
+	 * @throws Exception If problem retrieving.
+	 *
+	 * @return array[] An array of MetaBox entries, each describing a metabox.
+	 */
+	protected function get_metaboxes() {
+		return (array) $this->get_config( 'metaboxes' );
 	}
 }

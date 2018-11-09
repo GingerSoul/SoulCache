@@ -29,7 +29,7 @@ abstract class Handler {
 	/**
 	 * Handler constructor.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @param ContainerInterface $config The configuration of this plugin.
 	 */
@@ -40,7 +40,7 @@ abstract class Handler {
 	/**
 	 * Runs the plugin.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @return mixed
 	 */
@@ -53,7 +53,7 @@ abstract class Handler {
 	/**
 	 * Procedural way to run the handler.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @return mixed The result of handling.
 	 */
@@ -64,7 +64,7 @@ abstract class Handler {
 	/**
 	 * Retrieves a URL to the JS directory of the handler.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @param string $path The path relative to the JS directory.
 	 *
@@ -81,7 +81,7 @@ abstract class Handler {
 	/**
 	 * Retrieves a URL to the CSS directory of the handler.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @param string $path The path relative to the CSS directory.
 	 *
@@ -98,7 +98,7 @@ abstract class Handler {
 	/**
 	 * Creates a new template block.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @param PHP_Template|string $template The template or template key.
 	 * @param array               $context The context for the template.
@@ -120,7 +120,7 @@ abstract class Handler {
 	/**
 	 * Adds handler hooks.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @return void
 	 */

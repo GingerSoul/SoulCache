@@ -21,9 +21,9 @@ class Plugin extends Handler {
 	/**
 	 * Runs the plugin.
 	 *
-     * @since [*next-version*]
-     *
-     * @throws Exception If problem running.
+	 * @since [*next-version*]
+	 *
+	 * @throws Exception If problem running.
 	 *
 	 * @return mixed
 	 */
@@ -42,7 +42,7 @@ class Plugin extends Handler {
 	/**
 	 * {@inheritdoc}
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 */
 	protected function hook() {
 		add_action(
@@ -56,9 +56,9 @@ class Plugin extends Handler {
 	/**
 	 * Loads the plugin translations.
 	 *
-     * @since [*next-version*]
-     *
-     * @throws Exception If problem loading.
+	 * @since [*next-version*]
+	 *
+	 * @throws Exception If problem loading.
 	 */
 	protected function load_translations() {
 		$base_dir         = $this->get_config( 'base_dir' );
