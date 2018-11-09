@@ -97,6 +97,15 @@ return function ( $base_path, $base_url ) {
 							'std'               => '',
 							'type'              => 'image_advanced',
 						],
+						[
+							'name'              => __( 'Pages' ),
+							'id'                => 'precache_posts_page',
+							'label_description' => __( 'Pages that should be pre-cached when viewing this post' ),
+							'std'               => '',
+							'type'              => 'post',
+							'post_type'         => 'page',
+							'clone'             => true,
+						],
 					],
 				],
 			];
