@@ -1,4 +1,9 @@
 <?php
+/**
+ * Asset_Links_Handler class.
+ *
+ * @package SoulPrecache
+ */
 
 use GingerSoul\SoulPrecache\Asset_Links_Handler;
 use GingerSoul\SoulPrecache\Fields_Types_Handler;
