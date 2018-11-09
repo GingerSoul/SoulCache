@@ -19,7 +19,7 @@ class PHP_Template {
 	/**
 	 * Path to the template file.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @var string
 	 */
@@ -37,7 +37,7 @@ class PHP_Template {
 	/**
 	 * Renders the template with given context.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @param array $context The map of context keys to values.
 	 *
@@ -57,7 +57,7 @@ class PHP_Template {
 	/**
 	 * Retrieves the path to the template file.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @return string The path to the template file.
 	 */
@@ -68,7 +68,7 @@ class PHP_Template {
 	/**
 	 * Retrieves a function that will get context variables.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @param array $context The context for which to get the function.
 	 *

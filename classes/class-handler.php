@@ -9,7 +9,6 @@ namespace GingerSoul\SoulPrecache;
 
 use Exception;
 use Psr\Container\ContainerInterface;
-use Throwable;
 
 /**
  * A base class for all handlers.
@@ -29,9 +28,9 @@ abstract class Handler {
 	/**
 	 * Handler constructor.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
-	 * @param ContainerInterface $config The configuration of this plugin.
+	 * @param ContainerInterface $config The configuration of this handler.
 	 */
 	public function __construct( ContainerInterface $config ) {
 		$this->_set_config_container( $config );
@@ -40,9 +39,11 @@ abstract class Handler {
 	/**
 	 * Runs the plugin.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
-	 * @return mixed
+	 * @throws Exception If problem running.
+	 *
+	 * @return mixed The result of running the handler.
 	 */
 	public function run() {
 		$this->hook();
@@ -53,7 +54,9 @@ abstract class Handler {
 	/**
 	 * Procedural way to run the handler.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
+	 *
+	 * @throws Exception If problem during invoking.
 	 *
 	 * @return mixed The result of handling.
 	 */
@@ -64,7 +67,7 @@ abstract class Handler {
 	/**
 	 * Retrieves a URL to the JS directory of the handler.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @param string $path The path relative to the JS directory.
 	 *
@@ -81,7 +84,7 @@ abstract class Handler {
 	/**
 	 * Retrieves a URL to the CSS directory of the handler.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @param string $path The path relative to the CSS directory.
 	 *
@@ -98,7 +101,7 @@ abstract class Handler {
 	/**
 	 * Creates a new template block.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @param PHP_Template|string $template The template or template key.
 	 * @param array               $context The context for the template.
@@ -120,7 +123,7 @@ abstract class Handler {
 	/**
 	 * Adds handler hooks.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @return void
 	 */

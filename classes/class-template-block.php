@@ -23,7 +23,7 @@ class Template_Block {
 	/**
 	 * The template for this block to render.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @var PHP_Template
 	 */
@@ -32,7 +32,7 @@ class Template_Block {
 	/**
 	 * The context to render the template with.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @var array
 	 */
@@ -41,7 +41,7 @@ class Template_Block {
 	/**
 	 * Template_Block constructor.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @param PHP_Template $template The template that this block will render.
 	 * @param array        $context The context for the template.
@@ -54,7 +54,7 @@ class Template_Block {
 	/**
 	 * Renders the internal block with pre-determined context.
 	 *
-     * @since [*next-version*]
+	 * @since [*next-version*]
 	 *
 	 * @return string The rendered block.
 	 */

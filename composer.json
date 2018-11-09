@@ -19,7 +19,8 @@
     },
     "require-dev": {
         "wp-coding-standards/wpcs": "^1.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+        "wpackagist-plugin/meta-box": "^4.14"
     },
     "autoload": {
         "classmap": ["classes/"]
@@ -33,5 +34,13 @@
     "scripts": {
         "cscheck": "phpcs -s -n",
         "csfix": "phpcbf --standard=phpcs.xml"
+    },
+    "extra": {
+        "installer-paths": {
+            "../{$name}/": ["type:wordpress-plugin"]
+        }
+    },
+    "config": {
+        "process-timeout": 1000
     }
 }
