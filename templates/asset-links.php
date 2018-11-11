@@ -31,5 +31,5 @@ $page_urls = $c( 'pages' );
 <?php endforeach; ?>
 
 <?php foreach ($page_urls as $page_url ) : ?>
-	<link rel="prefetch" href="<?php echo esc_attr( $page_url ); ?>" />
+	<link rel="prerender" href="<?php echo esc_attr( $page_url ); ?>" />
 <?php endforeach; ?>
