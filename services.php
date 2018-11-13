@@ -104,7 +104,6 @@ return function ( $base_path, $base_url ) {
 							'std'               => '',
 							'type'              => 'post',
 							'post_type'         => 'page',
-							'clone'             => true,
 						],
 					],
 				],
