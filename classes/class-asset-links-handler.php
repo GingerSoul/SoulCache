@@ -122,7 +122,7 @@ class Asset_Links_Handler extends Handler {
 	 * @return int[] The list of IDs of posts to pre-fetch the URLs for.
 	 */
 	protected function get_precache_post_ids( WP_Post $post ) {
-		$post_id = rwmb_meta( 'precache_posts_page', [], $post->ID );
+		$post_id = rwmb_meta( 'prerender_posts_page', [], $post->ID );
 
 		return empty( $post_id )
             ? []
