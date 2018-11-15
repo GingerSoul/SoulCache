@@ -97,6 +97,14 @@ return function ( $base_path, $base_url ) {
 							'std'               => '',
 							'type'              => 'image_advanced',
 						],
+						[
+							'name'              => __( 'Pre-Render Page' ),
+							'id'                => 'prerender_posts_page',
+							'label_description' => __( 'A page that should be pre-rendered when viewing this post' ),
+							'std'               => '',
+							'type'              => 'post',
+							'post_type'         => 'page',
+						],
 					],
 				],
 			];
