@@ -79,13 +79,17 @@ class Asset_Links_Handler extends Handler {
 	 * @return array[] See {@link https://docs.metabox.io/fields/image-advanced/#template-usage}.
 	 */
 	protected function get_precache_images( WP_Post $post ) {
-		return rwmb_meta(
-			'precache_post_images',
-			[
-				'size' => 'thumbnail',
-			],
-			$post->ID
-		);
+        return $this->index_list(get_post_meta(
+            $post->ID,
+            'precache_post_images'
+        ), function( $value ) {
+            $data = wp_get_attachment_metadata( $value );
+            $data['full_url'] = wp_get_attachment_url( $value );
+
+            return $data;
+        }, function ( $value ) {
+            return $value;
+        });
 	}
 
 	/**
@@ -122,7 +126,7 @@ class Asset_Links_Handler extends Handler {
 	 * @return int[] The list of IDs of posts to pre-fetch the URLs for.
 	 */
 	protected function get_precache_post_ids( WP_Post $post ) {
-		$post_id = rwmb_meta( 'prerender_posts_page', [], $post->ID );
+        $post_id = get_post_meta( $post->ID, 'prerender_posts_page' );
 
 		return empty( $post_id )
             ? []
