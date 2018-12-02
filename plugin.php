@@ -8,8 +8,8 @@
  * Plugin Name: SoulCache
  * Description: A plugin for pre-cognitive browser caching of assets.
  * Version: [*next-version*]
- * Author: Anton Ukhanev
- * Author URI: https://twitter.com/XedinUnknown
+ * Author: GingerSoul
+ * Author URI: https://github.com/GingerSoul
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: soulcache
