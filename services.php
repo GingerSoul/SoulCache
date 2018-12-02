@@ -7,6 +7,7 @@
 
 use GingerSoul\SoulCache\Asset_Links_Handler;
 use GingerSoul\SoulCache\Fields_Types_Handler;
+use GingerSoul\SoulCache\Pre_Requisites_Handler;
 use Psr\Container\ContainerInterface;
 use GingerSoul\SoulCache\Plugin;
 use GingerSoul\SoulCache\PHP_Template;
@@ -80,7 +81,8 @@ return function ( $base_path, $base_url ) {
 		'handlers'                   => function ( ContainerInterface $c ) {
 			return [
 				$c->get( 'handler_fields_types' ),
-				$c->get( 'handler_asset_links' ),
+                $c->get( 'handler_asset_links' ),
+                $c->get( 'handler_pre_requisites' ),
 			];
 		},
 
@@ -139,5 +141,9 @@ return function ( $base_path, $base_url ) {
 		'handler_asset_links'        => function ( ContainerInterface $c ) {
 			return new Asset_Links_Handler( $c );
 		},
+
+        'handler_pre_requisites'     => function ( ContainerInterface $c ) {
+		    return new Pre_Requisites_Handler( $c );
+        },
 	];
 };
