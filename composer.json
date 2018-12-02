@@ -23,7 +23,7 @@
         "wpackagist-plugin/meta-box": "^4.14"
     },
     "autoload": {
-        "classmap": ["classes/"]
+        "classmap": ["classes/", "includes/"]
     },
     "repositories":[
         {
