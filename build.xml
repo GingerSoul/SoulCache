@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="soul_precache" default="build">
+<project name="soul_cache" default="build">
     <!-- Verbosity flag - false for normal Phing output, true for command execution passthru output -->
     <property name="verbose" value="false"/>
 
@@ -10,7 +10,7 @@
     </tstamp>
 
     <!-- The name of the build -->
-    <property name="build_name" value="soul-precache" />
+    <property name="build_name" value="soul-cache" />
 
     <!-- The build version number -->
     <property name="version" value="0.0.0-dev" />
@@ -21,7 +21,7 @@
     <property name="release_archive" value="${release_archive_name}-${version}-${build_timecode}.zip" />
 
     <!-- The base path, derived from the Phing project build file -->
-    <property name="base_path" value="${phing.dir.soul_precache}"/>
+    <property name="base_path" value="${phing.dir.soul_cache}"/>
     <!-- The name of the base directory -->
     <basename  property="base_dir" file="${base_path}" />
     <!-- The path to the parent directory -->
