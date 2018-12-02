@@ -2,17 +2,17 @@
 /**
  * DI_Container class.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-namespace GingerSoul\SoulPrecache;
+namespace GingerSoul\SoulCache;
 
 /**
  * Represents a template.
  *
  * @since [*next-version*]
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 class PHP_Template {
 

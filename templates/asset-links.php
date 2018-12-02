@@ -4,7 +4,7 @@
  *
  * Generates HTML for links that instruct the browser to pre-load assets.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
 /**

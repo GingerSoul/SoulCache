@@ -2,15 +2,15 @@
 /**
  * Asset_Links_Handler class.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-use GingerSoul\SoulPrecache\Asset_Links_Handler;
-use GingerSoul\SoulPrecache\Fields_Types_Handler;
+use GingerSoul\SoulCache\Asset_Links_Handler;
+use GingerSoul\SoulCache\Fields_Types_Handler;
 use Psr\Container\ContainerInterface;
-use GingerSoul\SoulPrecache\Plugin;
-use GingerSoul\SoulPrecache\PHP_Template;
-use GingerSoul\SoulPrecache\Template_Block;
+use GingerSoul\SoulCache\Plugin;
+use GingerSoul\SoulCache\PHP_Template;
+use GingerSoul\SoulCache\Template_Block;
 
 /**
  * Factory of the service map.
@@ -33,7 +33,7 @@ return function ( $base_path, $base_url ) {
 		'js_path'                    => '/assets/js',
 		'templates_dir'              => '/templates',
 		'translations_dir'           => '/languages',
-		'text_domain'                => 'soulprecache',
+		'text_domain'                => 'soulcache',
 
 		'plugin'                     => function ( ContainerInterface $c ) {
 			return new Plugin( $c );

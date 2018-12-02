@@ -2,10 +2,10 @@
 /**
  * Plugin class.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-namespace GingerSoul\SoulPrecache;
+namespace GingerSoul\SoulCache;
 
 use Exception;
 
@@ -14,7 +14,7 @@ use Exception;
  *
  * @since [*next-version*]
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 class Plugin extends Handler {
 

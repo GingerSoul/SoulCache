@@ -2,10 +2,10 @@
 /**
  * Handler class.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-namespace GingerSoul\SoulPrecache;
+namespace GingerSoul\SoulCache;
 
 use Exception;
 use Psr\Container\ContainerInterface;
@@ -13,7 +13,7 @@ use Psr\Container\ContainerInterface;
 /**
  * A base class for all handlers.
  *
- * @package SoulPrecache
+ * @package SoulCache
  *
  * @since [*next-version*]
  */

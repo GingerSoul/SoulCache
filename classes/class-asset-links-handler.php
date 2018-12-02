@@ -2,10 +2,10 @@
 /**
  * Asset_Links_Handler class.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-namespace GingerSoul\SoulPrecache;
+namespace GingerSoul\SoulCache;
 
 use Exception;
 use WP_Post;
@@ -15,7 +15,7 @@ use WP_Post;
  *
  * @since [*next-version*]
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 class Asset_Links_Handler extends Handler {
 
