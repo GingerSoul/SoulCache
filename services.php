@@ -142,6 +142,34 @@ return function ( $base_path, $base_url ) {
 			return new Asset_Links_Handler( $c );
 		},
 
+        'tgmpa'                      => function ( ContainerInterface $c ) {
+		    $tgmpa = TGM_Plugin_Activation::get_instance();
+
+		    $tgmpa->config([
+                'id'           => $c->get( 'text_domain' ), // Unique ID for hashing notices for multiple instances of TGMPA.
+                'menu'         => 'tgmpa-install-plugins',  // Menu slug.
+                'parent_slug'  => 'plugins.php',            // Parent menu slug.
+                'capability'   => 'manage_options',         // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
+                'has_notices'  => true,                     // Show admin notices or not.
+                'dismissable'  => true,                     // If false, a user cannot dismiss the nag message.
+                'dismiss_msg'  => '',                       // If 'dismissable' is false, this message will be output at top of nag.
+                'is_automatic' => false,                    // Automatically activate plugins after installation or not.
+                'message'      => '',                       // Message to output right before the plugins table.
+            ]);
+
+		    return $tgmpa;
+        },
+
+        'required_plugins'           => function ( ContainerInterface $c ) {
+		    return [
+		        [
+                    'name'      => 'MetaBox',
+                    'slug'      => 'meta-box',
+                    'required'  => false,
+                ],
+            ];
+        },
+
         'handler_pre_requisites'     => function ( ContainerInterface $c ) {
 		    return new Pre_Requisites_Handler( $c );
         },
