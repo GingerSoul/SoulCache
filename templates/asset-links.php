@@ -30,6 +30,6 @@ $page_urls = $c( 'pages' );
 	<link rel="prefetch" href="<?php echo esc_attr( $image_data['full_url'] ); ?>" />
 <?php endforeach; ?>
 
-<?php foreach ($page_urls as $page_url ) : ?>
+<?php foreach ( $page_urls as $page_url ) : ?>
 	<link rel="prerender" href="<?php echo esc_attr( $page_url ); ?>" />
 <?php endforeach; ?>

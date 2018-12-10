@@ -29,47 +29,47 @@ class Pre_Requisites_Handler extends Handler {
 		add_action(
 			'plugins_loaded',
 			function () {
-			    $plugins = $this->get_plugins();
-			    $this->register_plugins( $plugins );
+				$plugins = $this->get_plugins();
+				$this->register_plugins( $plugins );
 			}
 		);
 	}
 
-    /**
-     * Retrieves the list of plugins to depend on.
-     *
-     * @since [*next-version*]
-     *
-     * @return array[] A list of data about plugins. See {@link docs http://tgmpluginactivation.com/configuration/}.
-     */
+	/**
+	 * Retrieves the list of plugins to depend on.
+	 *
+	 * @since [*next-version*]
+	 *
+	 * @return array[] A list of data about plugins. See {@link docs http://tgmpluginactivation.com/configuration/}.
+	 */
 	protected function get_plugins() {
-        return $this->get_config( 'required_plugins' );
-    }
+		return $this->get_config( 'required_plugins' );
+	}
 
-    /**
-     * Retrieves the TGMPA instance.
-     *
-     * @since [*next-version*]
-     *
-     * @return TGM_Plugin_Activation The TGMPA instance.
-     */
-    protected function get_tgmpa() {
-        return $this->get_config( 'tgmpa' );
-    }
+	/**
+	 * Retrieves the TGMPA instance.
+	 *
+	 * @since [*next-version*]
+	 *
+	 * @return TGM_Plugin_Activation The TGMPA instance.
+	 */
+	protected function get_tgmpa() {
+		return $this->get_config( 'tgmpa' );
+	}
 
-    /**
-     * Registers plugin dependencies.
-     *
-     * @since [*next-version*]
-     *
-     * @param array[] $plugins A list of plugin info structures to register. See {@link docs http://tgmpluginactivation.com/configuration/}.
-     */
+	/**
+	 * Registers plugin dependencies.
+	 *
+	 * @since [*next-version*]
+	 *
+	 * @param array[] $plugins A list of plugin info structures to register. See {@link docs http://tgmpluginactivation.com/configuration/}.
+	 */
 	protected function register_plugins( $plugins ) {
-        $tgmpa = $this->get_tgmpa();
+		$tgmpa = $this->get_tgmpa();
 
-        foreach ( $plugins as $plugin_info ) {
-            $tgmpa->register( $plugin_info );
-        }
-    }
+		foreach ( $plugins as $plugin_info ) {
+			$tgmpa->register( $plugin_info );
+		}
+	}
 
 }
