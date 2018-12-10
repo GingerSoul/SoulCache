@@ -152,7 +152,7 @@ class Asset_Links_Handler extends Handler {
 		$type    = $post->post_type;
 		$allowed = $this->get_allowed_post_types();
 
-		return in_array( $type, $allowed );
+		return in_array( $type, $allowed, true );
 	}
 
 	/**
