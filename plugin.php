@@ -7,7 +7,7 @@
  *
  * Plugin Name: SoulCache
  * Description: A plugin for pre-cognitive browser caching of assets.
- * Version: [*next-version*]
+ * Version: 0.1
  * Author: GingerSoul
  * Author URI: https://github.com/GingerSoul
  * License: GNU General Public License v3.0

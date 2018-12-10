@@ -12,7 +12,7 @@ use Exception;
 /**
  * Plugin's main class.
  *
- * @since [*next-version*]
+ * @since 0.1
  *
  * @package SoulCache
  */
@@ -21,7 +21,7 @@ class Plugin extends Handler {
 	/**
 	 * Runs the plugin.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @throws Exception If problem running.
 	 *
@@ -42,7 +42,7 @@ class Plugin extends Handler {
 	/**
 	 * {@inheritdoc}
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 */
 	protected function hook() {
 		add_action(
@@ -56,7 +56,7 @@ class Plugin extends Handler {
 	/**
 	 * Loads the plugin translations.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @throws Exception If problem loading.
 	 */

@@ -13,19 +13,19 @@ use WP_Post;
 /**
  * Responsible for registering questions and answers related types and relationships between them.
  *
- * @since [*next-version*]
+ * @since 0.1
  *
  * @package SoulCache
  */
 class Asset_Links_Handler extends Handler {
 
-	/* @since [*next-version*] */
+	/* @since 0.1 */
 	use Index_List_Capable_Trait;
 
 	/**
 	 * {@inheritdoc}
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 */
 	public function hook() {
 		add_action(
@@ -39,7 +39,7 @@ class Asset_Links_Handler extends Handler {
 	/**
 	 * Retrieves the HTML that should be injected in the document head.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @return string The HTML of links to go into the document head.
 	 *
@@ -72,7 +72,7 @@ class Asset_Links_Handler extends Handler {
 	/**
 	 * Retrieves data about images which should be pre-cached for the given post.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param WP_Post $post The post to get the images for.
 	 *
@@ -99,7 +99,7 @@ class Asset_Links_Handler extends Handler {
 	/**
 	 * Retrieves URLs to pre-fetch for the given post.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param WP_Post $post The post to get the pre-fetch URLs for.
 	 *
@@ -123,7 +123,7 @@ class Asset_Links_Handler extends Handler {
 	/**
 	 * Retrieves IDs of posts to pre-fetch.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param WP_Post $post The post to pre-fetch the pages for.
 	 *
@@ -140,7 +140,7 @@ class Asset_Links_Handler extends Handler {
 	/**
 	 * Determines whether pre-caching is enabled for the given post.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param WP_Post $post The post to check pre-caching status for.
 	 *

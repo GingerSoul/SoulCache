@@ -14,7 +14,7 @@ trait Index_List_Capable_Trait {
 	/**
 	 * Indexes a list of entities.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param array|Traversable $entities A list of entities to index.
 	 * @param callable          $value_retriever The callback that will retrieve the value for each index.

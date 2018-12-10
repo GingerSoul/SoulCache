@@ -13,7 +13,7 @@ use Psr\Container\ContainerInterface;
 /**
  * Responsible for registering questions and answers related types and relationships between them.
  *
- * @since [*next-version*]
+ * @since 0.1
  *
  * @package SoulCache
  */
@@ -22,7 +22,7 @@ class Fields_Types_Handler extends Handler {
 	/**
 	 * {@inheritdoc}
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 */
 	protected function hook() {
 		add_filter(
@@ -38,7 +38,7 @@ class Fields_Types_Handler extends Handler {
 	 *
 	 * Mostly intended to handle the `rwmb_meta_boxes` filter.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 * @see https://docs.metabox.io/extensions/mb-term-meta/#example
 	 *
 	 * @param int[] $metaboxes The current list of metabox entries.
@@ -54,7 +54,7 @@ class Fields_Types_Handler extends Handler {
 	/**
 	 * Retrieves the metaboxes to create.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @see https://docs.metabox.io/extensions/mb-term-meta/
 	 *

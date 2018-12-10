@@ -23,7 +23,7 @@ trait Get_Template_Capable_Trait {
 	/**
 	 * Gets the template for the specified key.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param string $template The template key.
 	 *
@@ -46,7 +46,7 @@ trait Get_Template_Capable_Trait {
 	/**
 	 * Retrieves a config value.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param string $key The key of the config value to retrieve.
 	 *

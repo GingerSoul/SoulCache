@@ -14,7 +14,7 @@ use Psr\Container\ContainerExceptionInterface;
 /**
  * Functionality for awareness of configuration via a container.
  *
- * @since [*next-version*]
+ * @since 0.1
  *
  * @package SoulCache
  */
@@ -23,7 +23,7 @@ trait Config_Aware_Trait {
 	/**
 	 * The container of services and configuration used by the plugin.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @var ContainerInterface
 	 */
@@ -32,7 +32,7 @@ trait Config_Aware_Trait {
 	/**
 	 * Retrieves a config value.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param string $key The key of the config value to retrieve.
 	 *
@@ -61,7 +61,7 @@ trait Config_Aware_Trait {
 	/**
 	 * Assigns a configuration container for this instance.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param ContainerInterface $ccontainer The container that holds configuration.
 	 */
@@ -72,7 +72,7 @@ trait Config_Aware_Trait {
 	/**
 	 * Retrieves the configuration container for this instance.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @return ContainerInterface The container that holds configuration.
 	 */

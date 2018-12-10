@@ -10,7 +10,7 @@
 /**
  * A list of entries representing images.
  *
- * @since [*next-version*]
+ * @since 0.1
  * @see https://docs.metabox.io/fields/image-advanced/#template-usage
  *
  * @var array<int, array<string, mixed>>
@@ -20,7 +20,7 @@ $images = $c( 'images' );
 /**
  * A list of URLs of pages.
  *
- * @since [*next-version*]
+ * @since 0.1
  *
  * @var string[]
  */

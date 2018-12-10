@@ -14,7 +14,7 @@ use WP_Post;
 /**
  * Responsible for registering WP-related pre-requisites.
  *
- * @since [*next-version*]
+ * @since 0.1
  *
  * @package SoulCache
  */
@@ -23,7 +23,7 @@ class Pre_Requisites_Handler extends Handler {
 	/**
 	 * {@inheritdoc}
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 */
 	public function hook() {
 		add_action(
@@ -38,7 +38,7 @@ class Pre_Requisites_Handler extends Handler {
 	/**
 	 * Retrieves the list of plugins to depend on.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @return array[] A list of data about plugins. See {@link docs http://tgmpluginactivation.com/configuration/}.
 	 */
@@ -49,7 +49,7 @@ class Pre_Requisites_Handler extends Handler {
 	/**
 	 * Retrieves the TGMPA instance.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @return TGM_Plugin_Activation The TGMPA instance.
 	 */
@@ -60,7 +60,7 @@ class Pre_Requisites_Handler extends Handler {
 	/**
 	 * Registers plugin dependencies.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param array[] $plugins A list of plugin info structures to register. See {@link docs http://tgmpluginactivation.com/configuration/}.
 	 */

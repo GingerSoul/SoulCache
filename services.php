@@ -16,7 +16,7 @@ use GingerSoul\SoulCache\Template_Block;
 /**
  * Factory of the service map.
  *
- * @since [*next-version*]
+ * @since 0.1
  *
  * @param string $base_path The root directory of the application.
  * @param string $base_url The root URL of the application.
@@ -25,7 +25,7 @@ use GingerSoul\SoulCache\Template_Block;
  */
 return function ( $base_path, $base_url ) {
 	return [
-		'version'                    => '[*next-version*]',
+		'version'                    => '0.1',
 		'base_path'                  => $base_path,
 		'base_dir'                   => function ( ContainerInterface $c ) {
 			return dirname( $c->get( 'base_path' ) );
@@ -54,7 +54,7 @@ return function ( $base_path, $base_url ) {
 		/*
 		 * Makes templates.
 		 *
-		 * @since [*next-version*]
+		 * @since 0.1
 		 */
 		'template_factory'           => function ( ContainerInterface $c ) {
 			return function ( $path ) {
@@ -65,7 +65,7 @@ return function ( $base_path, $base_url ) {
 		/*
 		 * Makes blocs.
 		 *
-		 * @since [*next-version*]
+		 * @since 0.1
 		 */
 		'block_factory'              => function ( ContainerInterface $c ) {
 			return function ( PHP_Template $template, $context ) {
@@ -76,7 +76,7 @@ return function ( $base_path, $base_url ) {
 		/*
 		 * List of handlers to run.
 		 *
-		 * @since [*next-version*]
+		 * @since 0.1
 		 */
 		'handlers'                   => function ( ContainerInterface $c ) {
 			return [

@@ -15,20 +15,20 @@ use Psr\Container\ContainerInterface;
  *
  * @package SoulCache
  *
- * @since [*next-version*]
+ * @since 0.1
  */
 abstract class Handler {
 
-	/* @since [*next-version*] */
+	/* @since 0.1 */
 	use Config_Aware_Trait;
 
-	/* @since [*next-version*] */
+	/* @since 0.1 */
 	use Get_Template_Capable_Trait;
 
 	/**
 	 * Handler constructor.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param ContainerInterface $config The configuration of this handler.
 	 */
@@ -39,7 +39,7 @@ abstract class Handler {
 	/**
 	 * Runs the plugin.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @throws Exception If problem running.
 	 *
@@ -54,7 +54,7 @@ abstract class Handler {
 	/**
 	 * Procedural way to run the handler.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @throws Exception If problem during invoking.
 	 *
@@ -67,7 +67,7 @@ abstract class Handler {
 	/**
 	 * Retrieves a URL to the JS directory of the handler.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param string $path The path relative to the JS directory.
 	 *
@@ -84,7 +84,7 @@ abstract class Handler {
 	/**
 	 * Retrieves a URL to the CSS directory of the handler.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param string $path The path relative to the CSS directory.
 	 *
@@ -101,7 +101,7 @@ abstract class Handler {
 	/**
 	 * Creates a new template block.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param PHP_Template|string $template The template or template key.
 	 * @param array               $context The context for the template.
@@ -123,7 +123,7 @@ abstract class Handler {
 	/**
 	 * Adds handler hooks.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @return void
 	 */

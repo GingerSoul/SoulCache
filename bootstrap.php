@@ -13,7 +13,7 @@ use Dhii\Cache\MemoryMemoizer;
  * 5. Handle the request, and retrieve the response.
  * 6. Emit the response.
  *
- * @since [*next-version*]
+ * @since 0.1
  */
 return function ($appRootPath, $appRootUrl) {
 
