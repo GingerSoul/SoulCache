@@ -1,5 +1,5 @@
 {
-    "name": "gingersoul/soul-precache",
+    "name": "gingersoul/soul-cache",
     "description": "A WP plugin for pre-caching assets in the browser.",
     "license": "GPLv3",
     "prefer-stable": true,
@@ -23,7 +23,7 @@
         "wpackagist-plugin/meta-box": "^4.14"
     },
     "autoload": {
-        "classmap": ["classes/"]
+        "classmap": ["classes/", "includes/"]
     },
     "repositories":[
         {

@@ -2,10 +2,10 @@
 /**
  * Config_Aware_Trait trait.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-namespace GingerSoul\SoulPrecache;
+namespace GingerSoul\SoulCache;
 
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
@@ -16,7 +16,7 @@ use Psr\Container\ContainerExceptionInterface;
  *
  * @since [*next-version*]
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 trait Config_Aware_Trait {
 

@@ -2,10 +2,10 @@
 /**
  * Index_List_Capable_Trait class.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-namespace GingerSoul\SoulPrecache;
+namespace GingerSoul\SoulCache;
 
 use Traversable;
 

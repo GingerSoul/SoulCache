@@ -2,10 +2,10 @@
 /**
  * Get_Template_Capable_Trait trait.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-namespace GingerSoul\SoulPrecache;
+namespace GingerSoul\SoulCache;
 
 use Exception;
 use Psr\Container\ContainerExceptionInterface;
@@ -15,7 +15,7 @@ use RuntimeException;
 /**
  * Functionality for retrieving templates
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 trait Get_Template_Capable_Trait {
 

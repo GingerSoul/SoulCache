@@ -2,10 +2,10 @@
 /**
  * Fields_Types_Handler class.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-namespace GingerSoul\SoulPrecache;
+namespace GingerSoul\SoulCache;
 
 use Exception;
 use Psr\Container\ContainerInterface;
@@ -15,7 +15,7 @@ use Psr\Container\ContainerInterface;
  *
  * @since [*next-version*]
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 class Fields_Types_Handler extends Handler {
 

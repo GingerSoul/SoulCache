@@ -2,15 +2,16 @@
 /**
  * Asset_Links_Handler class.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-use GingerSoul\SoulPrecache\Asset_Links_Handler;
-use GingerSoul\SoulPrecache\Fields_Types_Handler;
+use GingerSoul\SoulCache\Asset_Links_Handler;
+use GingerSoul\SoulCache\Fields_Types_Handler;
+use GingerSoul\SoulCache\Pre_Requisites_Handler;
 use Psr\Container\ContainerInterface;
-use GingerSoul\SoulPrecache\Plugin;
-use GingerSoul\SoulPrecache\PHP_Template;
-use GingerSoul\SoulPrecache\Template_Block;
+use GingerSoul\SoulCache\Plugin;
+use GingerSoul\SoulCache\PHP_Template;
+use GingerSoul\SoulCache\Template_Block;
 
 /**
  * Factory of the service map.
@@ -33,7 +34,7 @@ return function ( $base_path, $base_url ) {
 		'js_path'                    => '/assets/js',
 		'templates_dir'              => '/templates',
 		'translations_dir'           => '/languages',
-		'text_domain'                => 'soulprecache',
+		'text_domain'                => 'soulcache',
 
 		'plugin'                     => function ( ContainerInterface $c ) {
 			return new Plugin( $c );
@@ -80,7 +81,8 @@ return function ( $base_path, $base_url ) {
 		'handlers'                   => function ( ContainerInterface $c ) {
 			return [
 				$c->get( 'handler_fields_types' ),
-				$c->get( 'handler_asset_links' ),
+                $c->get( 'handler_asset_links' ),
+                $c->get( 'handler_pre_requisites' ),
 			];
 		},
 
@@ -139,5 +141,37 @@ return function ( $base_path, $base_url ) {
 		'handler_asset_links'        => function ( ContainerInterface $c ) {
 			return new Asset_Links_Handler( $c );
 		},
+
+        'tgmpa'                      => function ( ContainerInterface $c ) {
+		    $tgmpa = TGM_Plugin_Activation::get_instance();
+
+		    $tgmpa->config([
+                'id'           => $c->get( 'text_domain' ), // Unique ID for hashing notices for multiple instances of TGMPA.
+                'menu'         => 'tgmpa-install-plugins',  // Menu slug.
+                'parent_slug'  => 'plugins.php',            // Parent menu slug.
+                'capability'   => 'manage_options',         // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
+                'has_notices'  => true,                     // Show admin notices or not.
+                'dismissable'  => true,                     // If false, a user cannot dismiss the nag message.
+                'dismiss_msg'  => '',                       // If 'dismissable' is false, this message will be output at top of nag.
+                'is_automatic' => false,                    // Automatically activate plugins after installation or not.
+                'message'      => '',                       // Message to output right before the plugins table.
+            ]);
+
+		    return $tgmpa;
+        },
+
+        'required_plugins'           => function ( ContainerInterface $c ) {
+		    return [
+		        [
+                    'name'      => 'MetaBox',
+                    'slug'      => 'meta-box',
+                    'required'  => false,
+                ],
+            ];
+        },
+
+        'handler_pre_requisites'     => function ( ContainerInterface $c ) {
+		    return new Pre_Requisites_Handler( $c );
+        },
 	];
 };
