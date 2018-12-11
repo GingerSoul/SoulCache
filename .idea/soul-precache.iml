@@ -2,7 +2,9 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/build" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dealerdirect/phpcodesniffer-composer-installer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/args-list-validation" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/cache-abstract" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/callback-abstract" />
@@ -39,6 +41,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/validation-base" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dhii/validation-interface" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/squizlabs/php_codesniffer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/wp-coding-standards/wpcs" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

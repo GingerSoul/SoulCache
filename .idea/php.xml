@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="PhpCodeSniffer">
+    <phpcs_settings>
+      <PhpCSConfiguration standards="MySource;NeutronStandard;PEAR;PSR1;PSR12;PSR2;Squiz;WordPress;WordPress-Core;WordPress-Docs;WordPress-Extra;WordPress-VIP;Zend" tool_path="$PROJECT_DIR$/../codeble-test-project/vendor/bin/phpcs" />
+    </phpcs_settings>
+  </component>
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/../../.." />
@@ -40,6 +45,9 @@
       <path value="$PROJECT_DIR$/vendor/dhii/normalization-helper-base" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/dealerdirect/phpcodesniffer-composer-installer" />
+      <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/vendor/wp-coding-standards/wpcs" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0" />
