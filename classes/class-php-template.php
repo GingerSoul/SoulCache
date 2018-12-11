@@ -2,24 +2,24 @@
 /**
  * DI_Container class.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-namespace GingerSoul\SoulPrecache;
+namespace GingerSoul\SoulCache;
 
 /**
  * Represents a template.
  *
- * @since [*next-version*]
+ * @since 0.1
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 class PHP_Template {
 
 	/**
 	 * Path to the template file.
 	 *
-     * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @var string
 	 */
@@ -37,7 +37,7 @@ class PHP_Template {
 	/**
 	 * Renders the template with given context.
 	 *
-     * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param array $context The map of context keys to values.
 	 *
@@ -57,7 +57,7 @@ class PHP_Template {
 	/**
 	 * Retrieves the path to the template file.
 	 *
-     * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @return string The path to the template file.
 	 */
@@ -68,7 +68,7 @@ class PHP_Template {
 	/**
 	 * Retrieves a function that will get context variables.
 	 *
-     * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param array $context The context for which to get the function.
 	 *

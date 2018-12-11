@@ -2,28 +2,28 @@
 /**
  * Plugin class.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-namespace GingerSoul\SoulPrecache;
+namespace GingerSoul\SoulCache;
 
 use Exception;
 
 /**
  * Plugin's main class.
  *
- * @since [*next-version*]
+ * @since 0.1
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 class Plugin extends Handler {
 
 	/**
 	 * Runs the plugin.
 	 *
-     * @since [*next-version*]
-     *
-     * @throws Exception If problem running.
+	 * @since 0.1
+	 *
+	 * @throws Exception If problem running.
 	 *
 	 * @return mixed
 	 */
@@ -42,7 +42,7 @@ class Plugin extends Handler {
 	/**
 	 * {@inheritdoc}
 	 *
-     * @since [*next-version*]
+	 * @since 0.1
 	 */
 	protected function hook() {
 		add_action(
@@ -56,9 +56,9 @@ class Plugin extends Handler {
 	/**
 	 * Loads the plugin translations.
 	 *
-     * @since [*next-version*]
-     *
-     * @throws Exception If problem loading.
+	 * @since 0.1
+	 *
+	 * @throws Exception If problem loading.
 	 */
 	protected function load_translations() {
 		$base_dir         = $this->get_config( 'base_dir' );

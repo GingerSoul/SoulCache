@@ -2,25 +2,28 @@
 /**
  * Config_Aware_Trait trait.
  *
- * @package SoulPrecache
+ * @package SoulCache
  */
 
-namespace GingerSoul\SoulPrecache;
+namespace GingerSoul\SoulCache;
 
-use Exception;
 use Psr\Container\ContainerInterface;
+use Psr\Container\NotFoundExceptionInterface;
+use Psr\Container\ContainerExceptionInterface;
 
 /**
- * @since [*next-version*]
+ * Functionality for awareness of configuration via a container.
  *
- * @package SoulPrecache
+ * @since 0.1
+ *
+ * @package SoulCache
  */
 trait Config_Aware_Trait {
 
 	/**
 	 * The container of services and configuration used by the plugin.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @var ContainerInterface
 	 */
@@ -29,11 +32,12 @@ trait Config_Aware_Trait {
 	/**
 	 * Retrieves a config value.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param string $key The key of the config value to retrieve.
 	 *
-	 * @throws Exception If problem retrieving.
+	 * @throws NotFoundExceptionInterface If config for the specified key is not found.
+	 * @throws ContainerExceptionInterface If problem retrieving config.
 	 *
 	 * @return mixed The config value.
 	 */
@@ -42,11 +46,13 @@ trait Config_Aware_Trait {
 	}
 
 	/**
-	 * @param $key
+	 * Checks whether configuration for the specified key exists.
 	 *
-	 * @throws Exception If problem checking.
+	 * @param string $key The key to check the configuration for.
 	 *
-	 * @return bool
+	 * @throws ContainerExceptionInterface If problem checking.
+	 *
+	 * @return bool True if config for the specified key exists; false otherwise.
 	 */
 	public function has_config( $key ) {
 		return $this->_get_config_container()->has( $key );
@@ -55,7 +61,7 @@ trait Config_Aware_Trait {
 	/**
 	 * Assigns a configuration container for this instance.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @param ContainerInterface $ccontainer The container that holds configuration.
 	 */
@@ -66,7 +72,7 @@ trait Config_Aware_Trait {
 	/**
 	 * Retrieves the configuration container for this instance.
 	 *
-	 * @since [*next-version*]
+	 * @since 0.1
 	 *
 	 * @return ContainerInterface The container that holds configuration.
 	 */
